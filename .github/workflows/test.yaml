@@ -27,9 +27,10 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
       - uses: r-lib/actions/setup-renv@v2
-      - name: Install devtools
-        run: |
-          Rscript -e "if (!requireNamespace('devtools', quietly = TRUE)) install.packages('devtools')"
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::devtools
+          needs: test
       - name: Run tests
         run: Rscript -e "devtools::test()"
 
