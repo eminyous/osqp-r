@@ -25,8 +25,8 @@ CXXFLAGS=`"${R_HOME}/bin/R" CMD config CXXFLAGS`
 LDFLAGS=`"${R_HOME}/bin/R" CMD config LDFLAGS`
 
 if [ -x "$(command -v cmake)" ]; then
-   	echo "Making fixes to osqp_sources for CRAN"
-	(cd src && ${R_HOME}/bin/Rscript ../inst/58f00bd_fixes/make_fixes.R)
+   	# echo "Making fixes to osqp_sources for CRAN"
+	# (cd src && ${R_HOME}/bin/Rscript ../inst/58f00bd_fixes/make_fixes.R)
 	echo "-- Trying to build libosqp.a via cmake ..."
 	cd src/osqp_sources
 	mkdir -p build

@@ -1,3 +1,5 @@
+^renv$
+^renv\.lock$
 ^.*tar.gz$
 ^.*travis\.yml$
 osqp_sources/CMakeFiles$
